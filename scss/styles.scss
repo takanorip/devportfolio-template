@@ -45,7 +45,7 @@ $border: #dcd9d9;
 
 // Define text colors
 $heading: #374054;
-$text: #74808a;
+$text: #666;
 
 /*
 ---------------------
@@ -371,7 +371,7 @@ footer {
 
   h1 {
     color: #fff;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 5em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -457,6 +457,8 @@ footer {
   p {
     color: $text;
     margin: 0;
+    line-height: 1.8;
+    letter-spacing: 1px;
   }
 }
 
@@ -519,7 +521,7 @@ footer {
     font-weight: 300;
     color: $heading;
     display: inline-block;
-    margin: 0;
+    margin: 0 0 12px;
   }
 
   h4 {
@@ -531,7 +533,8 @@ footer {
 
   p {
     color: $text;
-    font-size: 0.9em;
+    font-size: 1em;
+    line-height: 1.6;
     margin: 0;
   }
 }
@@ -668,7 +671,7 @@ footer {
     font-size: 1.5em;
     font-weight: 300;
     color: $heading;
-    margin: 0 0 15px 0;
+    // margin: 0 0 15px 0;
   }
 
   p {
@@ -900,9 +903,31 @@ footer {
     }
   }
 
+  .vtimeline-content {
+    h3 {
+      font-size: 1.2em;
+      margin: 0 0 10px;
+    }
+
+    h4 {
+      font-size: 1em;
+      margin: 0 0 12px 0;
+    }
+
+    p {
+      font-size: 0.8em;
+    }
+  }
+
   // .project-info {
   //   display: none;
   // }
+
+  .project-image {
+    width: 100%;
+    float: none;
+    img { width: 100%; }
+  }
 
   .project-info {
     position: relative;

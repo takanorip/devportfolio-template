@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
 
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
@@ -33,7 +34,22 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        },
+        open: false
+    });
+
+    gulp.watch('./**/*.html', browserSync.reload);
+    gulp.watch('./css/**/*.css', browserSync.reload);
+    gulp.watch('./js/**/*.js', browserSync.reload);
+});
+
 gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
 });
+
+gulp.task("default",["browser-sync","watch"]);
