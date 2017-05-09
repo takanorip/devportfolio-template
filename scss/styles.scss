@@ -33,19 +33,19 @@ File Contents:
 */
 
 // Define base and accent colors
-$base-color: #228b22;
+$base-color: #006699;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
 $background: #fff;
-$background-alt: #f2f2f5;
+$background-alt: #f5f5f5;
 
 // Define border colors
 $border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
-$text: #666;
+$heading: #212121;
+$text: #757575;
 
 /*
 ---------------------
@@ -83,8 +83,45 @@ $text: #666;
 ----------------------------
 */
 
+@font-face {
+  font-family: 'MANIFESTO';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/MANIFESTO.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MODERNE SANS';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/MODERNE SANS.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kano';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Kano.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Kontanter-Bold';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Kontanter-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Anders';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Anders.woff') format('woff');
+}
+
 body {
-  font-family: "Mplus 1p", sans-serif;
+  // font-family: "Mplus 1p", sans-serif;
+  // font-family: "Noto Sans Japanese", sans-serif;
+  font-family: YakuHanJP,"Kano","Noto Sans Japanese",sans-serif;
   font-size: 16px;
 
   &.active {
@@ -95,7 +132,7 @@ body {
 
 // No JS styles
 .no-js {
-  #experience-timeline {
+  .experience-timeline {
     > div {
       background: $background;
       padding: 10px;
@@ -140,12 +177,12 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   text-align: center;
-  z-index: 10;
+  z-index: 11;
   animation-name: dropHeader;
   animation-iteration-count: 1;
   animation-timing-function: ease;
@@ -170,6 +207,7 @@ header {
     display: block;
     color: $base-color;
     padding: 10px;
+    line-height: 1;
 
     &:hover {
       color: $base-color-hover;
@@ -194,13 +232,13 @@ header {
   }
 }
 
-#menu {
+.menu {
   &.active {
     display: block;
   }
 }
 
-#mobile-menu-open {
+.mobile-menu-open {
   display: none;
   cursor: pointer;
   position: fixed;
@@ -214,7 +252,7 @@ header {
   background: $background;
 }
 
-#mobile-menu-close {
+.mobile-menu-close {
   display: none;
   text-align: right;
   width: 100%;
@@ -339,13 +377,19 @@ footer {
   background: $background-alt;
 }
 
+.anchorblock {
+  width: 100%;
+  margin-top: -56px;
+  padding-top: 56px;
+}
+
 /*
 --------------------------
 ----- 4. Lead Styles -----
 --------------------------
 */
 
-#lead {
+.lead {
   position: relative;
   height: 100vh;
   min-height: 500px;
@@ -356,7 +400,7 @@ footer {
   overflow: hidden;
 }
 
-#lead-content {
+.lead-content {
   width: 100%;
   position: absolute;
   z-index: 10;
@@ -370,23 +414,25 @@ footer {
   }
 
   h1 {
+    margin-bottom: 4px;
     color: #fff;
     font-weight: 800;
     font-size: 5em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    line-height: 0.9em;
+    line-height: 1;
+    font-family: "Anders";
   }
 
   h2 {
-    color: lighten($base-color, 20%);
+    color: lighten($base-color, 30%);
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px;
   }
 }
 
-#lead-overlay {
+.lead-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -398,7 +444,7 @@ footer {
   z-index: 1;
 }
 
-#lead-down {
+.lead-down {
   position: absolute;
   left: 0;
   right: 0;
@@ -446,7 +492,7 @@ footer {
 ---------------------------
 */
 
-#about {
+.about {
   padding: 75px 15px;
   border-bottom: 1px solid $border;
 
@@ -468,7 +514,7 @@ footer {
 --------------------------------
 */
 
-#experience {
+.experience {
   padding: 50px 15px;
   text-align: center;
   border-bottom: 1px solid $border;
@@ -478,7 +524,7 @@ footer {
   }
 }
 
-#experience-timeline {
+.experience-timeline {
   margin: 30px auto 0 auto;
   position: relative;
   max-width: 1000px;
@@ -512,7 +558,7 @@ footer {
   margin-left: 350px;
   background: #fff;
   border: 1px solid #e6e6e6;
-  padding: 15px;
+  padding: 22px 24px;
   border-radius: 3px;
   text-align: left;
 
@@ -580,61 +626,13 @@ footer {
 -------------------------------
 */
 
-#education {
-  padding: 50px 15px 20px 15px;
-  border-bottom: 1px solid $border;
-  text-align: center;
-
-  h2 {
-    color: $heading;
-    margin-bottom: 50px;
-  }
-}
-
-.education-block {
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  padding: 15px;
-  border: 1px solid $border;
-  text-align: left;
-
-  h3 {
-    font-weight: 500;
-    float: left;
-    margin: 0;
-    color: $heading;
-  }
-
-  span {
-    color: $text;
-    float: right;
-  }
-
-  h4 {
-    color: $text;
-    clear: both;
-    font-weight: 500;
-    margin: 0 0 15px 0;
-  }
-
-  p, ul {
-    margin: 0;
-    color: $text;
-    font-size: 0.9em;
-  }
-
-  ul {
-    padding: 0 0 0 15px;
-  }
-}
-
 /*
 -------------------------------
 ----- 8. Project Styles -----
 -------------------------------
 */
 
-#projects {
+.projects {
   padding: 50px 15px;
   border-bottom: 1px solid $border;
   text-align: center;
@@ -657,7 +655,7 @@ footer {
 .project-image {
   width: 300px;
   float: left;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   &:before {
@@ -684,8 +682,8 @@ footer {
 
   p {
     color: $text;
-    margin: 0 0 10px 0;
-    font-size: 0.9em;
+    margin: 0 0 15px 0;
+    font-size: 1em;
   }
 }
 
@@ -702,8 +700,9 @@ footer {
   margin-right: 10px;
   padding: 4px 8px;
   color: #374054;
-  background: #e4e4ea;
+  background: #e8e8e8;
   font-size: 14px;
+  border-radius: 2px;
   &:last-child { margin-right: 0; }
 }
 
@@ -713,7 +712,7 @@ footer {
 -------------------------------
 */
 
-#skills {
+.skills {
   padding: 50px 15px;
   text-align: center;
 
@@ -738,6 +737,7 @@ footer {
     list-style: none;
     cursor: default;
     font-size: 1.2em;
+    border-radius: 2px;
   }
 }
 
@@ -747,7 +747,7 @@ footer {
 -------------------------------
 */
 
-#contact {
+.contact {
   padding: 50px 15px;
   background: $base-color;
   text-align: center;
@@ -759,7 +759,7 @@ footer {
   }
 }
 
-#contact-form {
+.contact-form {
   max-width: 500px;
   margin: 0 auto;
 
@@ -815,7 +815,7 @@ footer {
 // Collapse timeline
 @media only screen and (max-width: 750px) {
 
-  #experience-timeline {
+  .experience-timeline {
     &:before, &:after {
       left: 23px;
     }
@@ -837,6 +837,7 @@ footer {
 
   .vtimeline-content {
     margin-left: 70px;
+    padding: 16px;
   }
 
 }
@@ -844,14 +845,14 @@ footer {
 // Medium Devices
 @media only screen and (max-width : 992px) {
 
-  #lead {
+  .lead {
     height: auto;
     min-height: auto;
     max-height: auto;
     padding: 100px 15px;
   }
 
-  #lead-content {
+  .lead-content {
     position: relative;
     transform: none;
     left: auto;
@@ -866,11 +867,11 @@ footer {
     }
   }
 
-  #about {
+  .about {
     text-align: center;
 
     p {
-      text-align: left;
+      text-align: center;
     }
   }
 
@@ -886,13 +887,16 @@ footer {
     animation: none;
     bottom: 0;
     height: 100%;
+    a {
+      font-size: 2em;
+    }
   }
 
-  #mobile-menu-open, #mobile-menu-close {
+  .mobile-menu-open, .mobile-menu-close {
     display: block;
   }
 
-  #menu {
+  .menu {
     height: 100%;
     overflow-y: auto;
     box-shadow: none;
@@ -905,7 +909,7 @@ footer {
     }
   }
 
-  #lead-content {
+  .lead-content {
     h1 {
       font-size: 2em;
     }
@@ -919,8 +923,12 @@ footer {
     }
   }
 
-  #lead-down {
+  .lead-down {
     display: none;
+  }
+
+  .about p {
+    br { display: none; }
   }
 
   .education-block {
@@ -945,21 +953,30 @@ footer {
     }
   }
 
-  // .project-info {
-  //   display: none;
-  // }
-
   .project-image {
     width: 100%;
     float: none;
-    img { width: 100%; }
+    &:before {
+      padding-bottom: 56.25%;
+    }
   }
 
   .project-info {
+    width: 100%;
     position: relative;
     margin: 0;
+    padding: 30px 16px;
     top: auto;
     transform: none;
+    p { margin-bottom: 20px; }
+  }
+
+  .project-skills {
+    margin-bottom: 10px;
+  }
+
+  .project-skill {
+    margin-bottom: 10px;
   }
 
   footer {
@@ -968,26 +985,6 @@ footer {
 
   .social {
     text-align: center;
-  }
-
-}
-
-// Extra Small Devices
-@media only screen and (max-width : 480px) {
-
-  #lead-content {
-    h1 {
-      font-size: 1.5em;
-    }
-
-    h2 {
-      font-size: 1em;
-    }
-
-    a {
-      font-size: 0.9em;
-      padding: 5px 10px;
-    }
   }
 
 }

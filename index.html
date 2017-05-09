@@ -8,23 +8,23 @@
   <title>PORTFOLIO | TAKANORI OKI</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/yakuhanjp/2.0.0/css/yakuhanjp.min.css">
   <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <div id="mobile-menu-open" class="shadow-large">
+  <div class="mobile-menu-open" class="shadow-large">
     <i class="fa fa-bars" aria-hidden="true"></i>
   </div>
   <!-- End #mobile-menu-toggle -->
   <header class="shadow">
-    <div id="mobile-menu-close">
+    <div class="mobile-menu-close">
       <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
     </div>
-    <ul id="menu">
+    <ul class="menu">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -34,17 +34,17 @@
   </header>
   <!-- End header -->
 
-  <div id="lead">
-    <div id="lead-content">
+  <div class="lead">
+    <div class="lead-content">
       <h1>Takanori Oki</h1>
       <h2>Frontend Developer</h2>
       <a href="https://www.wantedly.com/users/921343" target="_blank" class="btn-rounded-white">Download Resume</a>
     </div>
     <!-- End #lead-content -->
 
-    <div id="lead-overlay"></div>
+    <div class="lead-overlay"></div>
 
-    <div id="lead-down">
+    <div class="lead-down">
       <span>
         <i class="fa fa-chevron-down" aria-hidden="true"></i>
       </span>
@@ -53,7 +53,8 @@
   </div>
   <!-- End #lead -->
 
-  <div id="about">
+  <div id="about" class="anchorblock"></div>
+  <div class="about">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -72,9 +73,10 @@
   </div>
   <!-- End #about -->
 
-  <div id="experience" class="background-alt">
+  <div id="experience" class="anchorblock"></div>
+  <div class="experience" class="background-alt">
     <h2 class="heading">Experience</h2>
-    <div id="experience-timeline">
+    <div class="experience-timeline">
       <div data-date="February 2015 – February 2016">
         <h3>株式会社アイディ</h3>
         <h4>Webディレクター / コーダー</h4>
@@ -83,7 +85,7 @@
         </p>
       </div>
 
-      <div data-date="May 2016 – May 2016">
+      <div data-date="May 2016 – June 2017">
         <h3>株式会社フォーデジット</h3>
         <h4>フロントエンドエンジニア</h4>
         <p>
@@ -94,8 +96,8 @@
     </div>
   </div>
   <!-- End #experience -->
-
-  <div id="projects" class="background-alt">
+  <div id="projects" class="anchorblock"></div>
+  <div class="projects background-alt">
     <h2 class="heading">Projects</h2>
     <div class="container">
       <div class="row">
@@ -111,10 +113,33 @@
               <li class="project-skill">HTML</li>
               <li class="project-skill">CSS</li>
               <li class="project-skill">Stylus</li>
+              <li class="project-skill">JavaScript</li>
               <li class="project-skill">jQuery</li>
+              <li class="project-skill">npm scripts</li>
               <li class="project-skill">WordPress</li>
             </ul>
-            <a href="https://www.lendy.jp/">View Project</a>
+            <a href="https://www.lendy.jp/" target="_blank">View Project</a>
+          </div>
+          <!-- End .project-info -->
+        </div>
+        <!-- End .project -->
+        <div class="project shadow-large">
+          <div class="project-image" style="background-image: url(images/neko.jpg)"></div>
+          <!-- End .project-image -->
+          <div class="project-info">
+            <h3>TAKANORI OKI</h3>
+            <p>
+              ポートフォリオサイトの作成。
+            </p>
+            <ul class="project-skills">
+              <li class="project-skill">HTML</li>
+              <li class="project-skill">CSS</li>
+              <li class="project-skill">Sass</li>
+              <li class="project-skill">JavaScript</li>
+              <li class="project-skill">jQuery</li>
+              <li class="project-skill">Gulp</li>
+            </ul>
+            <a href="https://takanorip.github.io/portfolio/" target="_blank">View Project</a>
           </div>
           <!-- End .project-info -->
         </div>
@@ -124,7 +149,8 @@
   </div>
   <!-- End #projects -->
 
-  <div id="skills">
+  <div id="skills" class="anchorblock"></div>
+  <div class="skills">
     <h2 class="heading">Skills</h2>
     <ul>
       <li>HTML</li>
@@ -136,13 +162,15 @@
       <li>React</li>
       <li>Gulp</li>
       <li>WordPress</li>
+      <li>Git</li>
     </ul>
   </div>
   <!-- End #skills -->
 
-  <div id="contact">
+  <div id="contact" class="anchorblock"></div>
+  <div class="contact">
     <h2>Get in Touch</h2>
-    <div id="contact-form">
+    <div class="contact-form">
       <form method="POST" action="https://formspree.io/takanori0170@gmail.com">
         <input type="hidden" name="_subject" value="Contact request from personal website" />
         <input type="email" name="_replyto" placeholder="Your email" required>
@@ -161,7 +189,7 @@
           <p>Copyright &copy; 2017 TAKANORI OKI</p>
         </div>
         <div class="col-sm-2 top">
-          <span id="to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+          <span class="to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
         </div>
         <div class="col-sm-5 social">
           <ul>

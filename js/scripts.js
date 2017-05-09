@@ -40,22 +40,22 @@
     });
 
     // Scroll to top
-    $('#to-top').click(function() {
+    $('.to-top').click(function() {
         $('html, body').animate({
             scrollTop: 0
         }, 500);
     });
 
     // Scroll to first element
-    $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
+    $('.lead-down span').click(function() {
+        var scrollDistance = $('.lead').next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
         }, 500);
     });
 
     // Create timeline
-    $('#experience-timeline').each(function() {
+    $('.experience-timeline').each(function() {
 
         $this = $(this); // Store reference to this
         $userContent = $this.children('div'); // user content
@@ -81,12 +81,12 @@
     });
 
     // Open mobile menu
-    $('#mobile-menu-open').click(function() {
+    $('.mobile-menu-open').click(function() {
         $('header, body').addClass('active');
     });
 
     // Close mobile menu
-    $('#mobile-menu-close').click(function() {
+    $('.mobile-menu-close').click(function() {
         $('header, body').removeClass('active');
     });
 
