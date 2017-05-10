@@ -203,7 +203,8 @@ header {
     display: inline-block;
   }
 
-  a {
+  a,
+  span {
     display: block;
     color: $base-color;
     padding: 10px;
@@ -235,6 +236,11 @@ header {
 .menu {
   &.active {
     display: block;
+  }
+  li {
+    span {
+      cursor: pointer;
+    }
   }
 }
 
@@ -338,7 +344,8 @@ footer {
   border-radius: 30px;
   @include transition();
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $base-color;
     background: #fff;
     text-decoration: none;
@@ -619,7 +626,7 @@ footer {
   background: $base-color;
   border-radius: 50%;
   float: left;
-  z-index: 99;
+  z-index: 9;
   margin-left: 280px;
 
   i {
