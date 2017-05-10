@@ -512,9 +512,11 @@ footer {
 .about {
   padding: 75px 15px;
   border-bottom: 1px solid $border;
+  text-align: center;
 
   h2 {
     color: $heading;
+    margin-bottom: 50px;
   }
 
   p {
@@ -925,6 +927,8 @@ footer {
       margin-bottom: 10px;
     }
   }
+
+  .lead { margin-top: 0; }
 
   .lead-content {
     h1 {

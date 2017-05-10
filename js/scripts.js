@@ -92,11 +92,11 @@
 
     // SVG
     var mySVG = $('svg').drawsvg({
-      duration: 2000
+      duration: 1600
     });
     function svg() {
       mySVG.drawsvg('animate');
     }
-    setTimeout(svg,500);
+    setTimeout(svg,1000);
 
 })(jQuery);
