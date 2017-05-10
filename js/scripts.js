@@ -90,4 +90,13 @@
         $('header, body').removeClass('active');
     });
 
+    // SVG
+    var mySVG = $('svg').drawsvg({
+      duration: 2000
+    });
+    function svg() {
+      mySVG.drawsvg('animate');
+    }
+    setTimeout(svg,500);
+
 })(jQuery);

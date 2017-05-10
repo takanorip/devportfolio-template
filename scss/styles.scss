@@ -391,10 +391,12 @@ footer {
 
 .lead {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 56px);
   min-height: 500px;
   max-height: 1080px;
-  background: url(../images/lead-bg.jpg);
+  margin-top: 56px;
+  // background: url(../images/lead-bg.jpg);
+  background-color: $base-color;
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -425,7 +427,8 @@ footer {
   }
 
   h2 {
-    color: lighten($base-color, 30%);
+    // color: lighten($base-color, 25%);
+    color: #fff;
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px;
@@ -440,7 +443,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba($base-color-hover, 0.4);
+  background: rgba($base-color-hover, 0.8);
   z-index: 1;
 }
 
@@ -469,6 +472,20 @@ footer {
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
     padding-top: 5px;;
+  }
+}
+
+.lead-svg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  svg {
+    height: calc(100% - 30px);
+    margin-top: 15px;
   }
 }
 
