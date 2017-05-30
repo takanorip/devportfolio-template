@@ -34,7 +34,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function(done) {
     browserSync.init({
         server: {
             baseDir: "./"
@@ -45,6 +45,9 @@ gulp.task('browser-sync', function() {
     gulp.watch('./**/*.html', browserSync.reload);
     gulp.watch('./css/**/*.css', browserSync.reload);
     gulp.watch('./js/**/*.js', browserSync.reload);
+
+    browserSync.reload();
+    done();
 });
 
 gulp.task('watch', ['scripts', 'styles'], function() {
