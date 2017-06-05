@@ -760,6 +760,45 @@ footer {
   }
 }
 
+.skills_barchart {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  &.js-animate {
+    .data {
+      padding-left: 32px;
+      transition: padding 0.3s ease, width 1s ease;
+    }
+  }
+}
+.skills_row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.skills_skill {
+  width: 150px;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 40px;
+  text-align: left;
+}
+.skills_bar {
+  width: calc(100% - 150px);
+}
+.data {
+  display: block;
+  width: 0;
+  height: 40px;
+  background: lighten($base-color, 25%);
+  line-height: 40px;
+  text-align: left;
+  color: #fff;
+  border-radius: 4px;
+}
+
+@keyframes anime1 {
+  0% {width: 0px;}
+}
+
 /*
 -------------------------------
 ----- 10. Contact Styles -----
@@ -1002,6 +1041,29 @@ footer {
 
   .project-skill {
     margin-bottom: 10px;
+  }
+
+  .skills_row {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .skills_skill {
+    width: 100%;
+    line-height: 36px;
+  }
+
+  .skills_bar {
+    width: 100%;
+  }
+
+  .data {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .skills_barchart.js-animate .data {
+    padding-left: 12px;
   }
 
   footer {
