@@ -1045,12 +1045,13 @@ footer {
 
   .skills_row {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   .skills_skill {
     width: 100%;
-    line-height: 36px;
+    line-height: 28px;
+    font-size: 14px;
   }
 
   .skills_bar {
@@ -1058,8 +1059,8 @@ footer {
   }
 
   .data {
-    height: 36px;
-    line-height: 36px;
+    height: 28px;
+    line-height: 28px;
   }
 
   .skills_barchart.js-animate .data {
