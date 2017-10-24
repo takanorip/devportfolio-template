@@ -55,4 +55,6 @@ gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch('scss/*.scss', ['styles']);
 });
 
+gulp.task('build', ['scripts', 'styles']);
+
 gulp.task("default",["browser-sync","watch"]);
